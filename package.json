@@ -1,0 +1,12 @@
+{
+  "name": "tharushi-birthday",
+  "version": "1.0.0",
+  "description": "Romantic Birthday Website for Tharushi Vishmika",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["birthday", "romantic", "celebration"],
+  "author": "",
+  "license": "MIT"
+}
