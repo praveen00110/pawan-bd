@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Tharushi Vishmika 🎂💖</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Parisienne&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Romantic Canvas Overlays -->
+  <canvas id="sky-canvas"></canvas>
+  <canvas id="petals-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Audio Player (Autoplay & Local Romantic Birthday Tune) -->
+  <audio id="bg-music" src="romantic_music.wav" loop preload="auto"></audio>
+
+  <!-- Floating Vinyl Music Player -->
+  <div class="music-toggle" id="music-toggle" title="Play / Pause Romantic Music">
+    <div class="vinyl-disc" id="vinyl-disc">
+      <div class="disc-center"></div>
+    </div>
+    <span class="music-label" id="music-label">Music: Tap to Play 🎵</span>
+  </div>
+
+  <!-- Main Experience Wrapper -->
+  <main class="main-container">
+
+    <!-- SCENE 0: Romantic Entrance Curtain -->
+    <section class="scene active" id="scene-welcome">
+      <div class="glass-card">
+        <div class="cover-sparkle">🌸✨💖</div>
+        <p class="romantic-sub">A Very Special Surprise For</p>
+        <h1 class="title-glow">THARUSHI VISHMIKA</h1>
+        <p class="body-text">
+          Close your eyes, take a gentle breath, and step inside... A romantic story crafted especially for your birthday night.
+        </p>
+        <button class="romantic-btn pulse-glow" id="start-btn">
+          <span>Open My Birthday Story</span>
+          <span style="font-size: 1.3rem;">💌</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- SCENE 1: The Bike Arrival & Flower Bouquet -->
+    <section class="scene" id="scene-bike">
+      <div class="glass-card">
+        <p class="romantic-sub">Under the Midnight Sky</p>
+        <h2 class="title-glow" style="font-size: 2.3rem;">Someone Just Arrived For You...</h2>
+        
+        <div class="stage-container">
+          <div class="moon"></div>
+          
+          <!-- Animated Bike Actor -->
+          <div class="bike-actor" id="bike-actor">
+            <div class="headlight-beam"></div>
+            <div class="exhaust-smoke"></div>
+            <!-- Sleek Modern Motorcycle SVG -->
+            <svg viewBox="0 0 320 180" width="230" height="130" xmlns="http://www.w3.org/2000/svg">
+              <!-- Shadow -->
+              <ellipse cx="160" cy="165" rx="130" ry="8" fill="rgba(0,0,0,0.5)" filter="blur(4px)" />
+              
+              <!-- Back Wheel -->
+              <circle cx="65" cy="130" r="38" fill="#15121e" stroke="#554d74" stroke-width="8"/>
+              <circle cx="65" cy="130" r="24" fill="#0f0c18" stroke="#ff4071" stroke-width="3"/>
+              <circle cx="65" cy="130" r="8" fill="#ffd166"/>
+              
+              <!-- Front Wheel -->
+              <circle cx="255" cy="130" r="38" fill="#15121e" stroke="#554d74" stroke-width="8"/>
+              <circle cx="255" cy="130" r="24" fill="#0f0c18" stroke="#ff4071" stroke-width="3"/>
+              <circle cx="255" cy="130" r="8" fill="#ffd166"/>
+
+              <!-- Frame / Bodywork -->
+              <path d="M 65 130 L 140 130 L 195 90 L 255 130" fill="none" stroke="#2b2045" stroke-width="9" stroke-linecap="round"/>
+              <path d="M 115 130 L 160 85 L 215 85 L 245 125" fill="#d81b60" stroke="#ff4071" stroke-width="3"/>
+              
+              <!-- Fuel Tank & Seat -->
+              <path d="M 130 90 C 145 65, 185 65, 205 85 C 180 92, 140 92, 130 90 Z" fill="#ff4071"/>
+              <path d="M 95 95 C 110 88, 135 88, 145 92 L 135 105 L 90 102 Z" fill="#211c30"/>
+
+              <!-- Engine block -->
+              <rect x="135" y="105" width="45" height="35" rx="6" fill="#38304f" stroke="#5d527a" stroke-width="2"/>
+              <!-- Exhaust Pipe -->
+              <path d="M 155 125 L 80 142 L 45 138" fill="none" stroke="#ffd166" stroke-width="5" stroke-linecap="round"/>
+
+              <!-- Handlebars & Front Fork -->
+              <path d="M 210 85 L 255 130" stroke="#8c82ab" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="218" cy="72" r="7" fill="#ffd166"/>
+              <path d="M 205 72 L 232 70" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+
+              <!-- Headlight -->
+              <polygon points="252,80 270,75 270,95 252,90" fill="#fff9db" filter="drop-shadow(0 0 10px #ffe699)"/>
+
+              <!-- Rider Silhouette (leaning stylishly) -->
+              <circle cx="152" cy="40" r="14" fill="#30264a"/> <!-- Helmet -->
+              <path d="M 154 38 L 166 43" stroke="#ffd166" stroke-width="3" stroke-linecap="round"/> <!-- Visor -->
+              <path d="M 145 54 C 155 45, 175 50, 185 68 L 170 95 L 140 92 Z" fill="#201933"/> <!-- Jacket -->
+              <path d="M 165 65 L 210 74" stroke="#201933" stroke-width="7" stroke-linecap="round"/> <!-- Arm -->
+              <path d="M 142 95 L 158 128 L 175 132" stroke="#161124" stroke-width="8" stroke-linecap="round" fill="none"/> <!-- Leg -->
+            </svg>
+          </div>
+
+          <!-- Standing Boy with Bouquet & Letter (Appears when bike stops) -->
+          <div class="standing-boy" id="standing-boy">
+            <div class="boy-bubble">
+              "Tharushi! I came across the miles just to see you smile today 🌹"
+            </div>
+
+            <!-- Boy Offering Flowers & Sealed Envelope SVG -->
+            <svg viewBox="0 0 180 260" width="150" height="215" xmlns="http://www.w3.org/2000/svg">
+              <!-- Ground Shadow -->
+              <ellipse cx="90" cy="250" rx="60" ry="6" fill="rgba(0,0,0,0.5)" filter="blur(3px)" />
+
+              <!-- Legs & Shoes -->
+              <path d="M 75 160 L 70 240 L 60 245" stroke="#1b152b" stroke-width="12" stroke-linecap="round" fill="none"/>
+              <path d="M 105 160 L 110 240 L 120 245" stroke="#1b152b" stroke-width="12" stroke-linecap="round" fill="none"/>
+
+              <!-- Body / Stylish Jacket -->
+              <path d="M 68 85 C 68 75, 112 75, 112 85 L 118 165 C 118 170, 62 170, 62 165 Z" fill="#2c2045"/>
+              <path d="M 85 85 L 90 140 L 95 85" stroke="#ff7597" stroke-width="3" fill="none"/>
+
+              <!-- Head & Stylish Hair -->
+              <circle cx="90" cy="52" r="22" fill="#ffd8b8"/> <!-- Face -->
+              <path d="M 68 45 C 68 20, 112 20, 112 45 C 108 30, 75 30, 68 45 Z" fill="#181126"/> <!-- Hair -->
+              <!-- Smiling Face -->
+              <circle cx="83" cy="50" r="2.5" fill="#221533"/>
+              <circle cx="97" cy="50" r="2.5" fill="#221533"/>
+              <path d="M 85 59 Q 90 65 95 59" stroke="#c94a6b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <!-- Blush -->
+              <circle cx="78" cy="56" r="4" fill="rgba(255,100,140,0.4)"/>
+              <circle cx="102" cy="56" r="4" fill="rgba(255,100,140,0.4)"/>
+
+              <!-- Left Arm holding Red Rose Bouquet -->
+              <path d="M 70 95 L 45 125 L 35 110" stroke="#2c2045" stroke-width="10" stroke-linecap="round" fill="none"/>
+              
+              <!-- Bouquet of Roses -->
+              <g transform="translate(10, 80)">
+                <!-- Wrapping paper -->
+                <polygon points="25,55 10,25 45,25" fill="#fce4ec" stroke="#f48fb1" stroke-width="2"/>
+                <path d="M 20 42 Q 28 48 35 42" stroke="#d81b60" stroke-width="2" fill="none"/>
+                <!-- Ribbon -->
+                <circle cx="28" cy="46" r="3" fill="#ff4071"/>
+                
+                <!-- Blooming Roses -->
+                <circle cx="18" cy="20" r="9" fill="#e63946"/>
+                <circle cx="18" cy="20" r="5" fill="#ff4d6d"/>
+                <circle cx="34" cy="18" r="10" fill="#d00000"/>
+                <circle cx="34" cy="18" r="6" fill="#ff4d6d"/>
+                <circle cx="26" cy="10" r="11" fill="#ff0054"/>
+                <circle cx="26" cy="10" r="7" fill="#ff758f"/>
+                <circle cx="15" cy="8" r="7" fill="#c9184a"/>
+                <circle cx="38" cy="9" r="7" fill="#ff4d6d"/>
+
+                <!-- Sparkles -->
+                <polygon points="5,5 8,7 5,9 2,7" fill="#ffd166"/>
+                <polygon points="45,2 48,4 45,6 42,4" fill="#ffd166"/>
+              </g>
+
+              <!-- Right Arm presenting glowing Love Letter -->
+              <path d="M 110 95 L 140 120 L 155 115" stroke="#2c2045" stroke-width="10" stroke-linecap="round" fill="none"/>
+              <!-- Glowing Envelope in Hand -->
+              <g transform="translate(135, 100) rotate(15)">
+                <rect x="0" y="0" width="36" height="24" rx="3" fill="#ffffff" stroke="#ff4071" stroke-width="2" filter="drop-shadow(0 0 8px #ff7597)"/>
+                <polygon points="0,0 18,12 36,0" fill="#ffd3dd" stroke="#ff4071" stroke-width="1.5"/>
+                <circle cx="18" cy="12" r="3.5" fill="#d81b60"/>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Road & Moving Dashes -->
+          <div class="road">
+            <div class="road-dashes" id="road-dashes"></div>
+          </div>
+        </div>
+
+        <button class="romantic-btn pulse-glow" id="bike-next-btn" style="display: none;">
+          <span>Take The Flowers & Read Letter</span>
+          <span>💐💌</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- SCENE 2: The Letter Opening -->
+    <section class="scene" id="scene-letter">
+      <div class="glass-card">
+        <p class="romantic-sub">From His Heart To Yours</p>
+        <h2 class="title-glow" style="font-size: 2.3rem;">Tap The Wax Seal To Open</h2>
+
+        <!-- Interactive Envelope -->
+        <div class="envelope-wrapper" id="envelope">
+          <div class="envelope">
+            <div class="envelope-flap"></div>
+            <div class="wax-seal" id="wax-seal" title="Click to break seal">TV</div>
+            <div class="envelope-pocket"></div>
+          </div>
+        </div>
+
+        <!-- Unfolded Romantic Letter -->
+        <div class="letter-paper" id="letter-paper">
+          <h3 class="letter-header">Dearest Tharushi Vishmika 💖</h3>
+          <div class="letter-content">
+            <p>
+              Happy Birthday to the girl whose smile lights up my entire world.
+            </p>
+            <p>
+              Every second spent with you feels like a blessing I never knew I deserved. Your laughter, your kindness, your gentle eyes, and the way you make every little moment feel like a fairy tale—you are truly one in eight billion.
+            </p>
+            <p>
+              On this special day, I wish you all the happiness this universe can hold. May all your dreams blossom into reality, and know that wherever life takes us, my heart will always beat right beside yours.
+            </p>
+            <p>
+              I have prepared something sweet just for you... Make a wish, my love! ✨
+            </p>
+          </div>
+          <div class="letter-footer">Forever & Truly Yours ❤️</div>
+
+          <div style="text-align: center; margin-top: 25px;">
+            <button class="romantic-btn pulse-glow" id="letter-next-btn">
+              <span>Make a Wish & Cut The Cake</span>
+              <span>🎂✨</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 3: The Birthday Cake Cutting -->
+    <section class="scene" id="scene-cake">
+      <div class="glass-card">
+        <p class="romantic-sub">Make a Beautiful Wish</p>
+        <h2 class="title-glow" style="font-size: 2.3rem;">Time To Cut Your Birthday Cake!</h2>
+
+        <div class="cake-area" id="cake-area">
+          <!-- Knife Icon Tool -->
+          <div class="knife-tool" id="knife-tool" title="Tap to slice the cake!">🔪</div>
+
+          <!-- 3-Tier Artisan Cake -->
+          <div class="cake-wrapper" id="cake-wrapper">
+            <!-- Candles on Top Tier -->
+            <div class="candles-row">
+              <div class="candle">
+                <div class="flame"></div>
+                <div class="flame-smoke"></div>
+              </div>
+              <div class="candle" style="height: 38px; margin-top: -6px;">
+                <div class="flame"></div>
+                <div class="flame-smoke"></div>
+              </div>
+              <div class="candle">
+                <div class="flame"></div>
+                <div class="flame-smoke"></div>
+              </div>
+            </div>
+
+            <!-- Cake Topper -->
+            <div class="cake-topper">Tharushi Vishmika 🌸</div>
+
+            <!-- Top Tier -->
+            <div class="cake-tier tier-top">
+              <div class="frosting-drips"></div>
+            </div>
+
+            <!-- Middle Tier -->
+            <div class="cake-tier tier-middle">
+              <div class="frosting-drips"></div>
+            </div>
+
+            <!-- Bottom Tier -->
+            <div class="cake-tier tier-bottom">
+              <div class="frosting-drips"></div>
+            </div>
+
+            <!-- Sliced Piece That Pops Out -->
+            <div class="cake-slice" id="cake-slice">
+              <svg viewBox="0 0 100 100" width="80" height="80">
+                <polygon points="50,15 85,85 15,85" fill="#ff4d79" stroke="#ffffff" stroke-width="3"/>
+                <polygon points="50,15 70,85 30,85" fill="#ff8da6"/>
+                <circle cx="50" cy="30" r="6" fill="#ffd166"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Cake Golden Stand -->
+          <div class="cake-stand"></div>
+        </div>
+
+        <p class="slice-instruction" id="cake-status-msg">
+          Tap the knife or touch the cake to cut your slice! 🎂
+        </p>
+
+        <div style="margin-top: 25px; display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+          <button class="romantic-btn" id="cake-cut-btn">
+            <span>Cut The Cake Now 🔪</span>
+          </button>
+          <button class="romantic-btn pulse-glow" id="cake-next-btn" style="display: none;">
+            <span>See What's In My Heart 💭</span>
+            <span>✨</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 4: Boy Sitting Down, Thinking & Watching Her (Photo Memories) -->
+    <section class="scene" id="scene-gallery">
+      <div class="glass-card">
+        <p class="romantic-sub">Endless Thoughts Of You</p>
+        <h2 class="title-glow" style="font-size: 2.2rem;">Sitting Beside You, Admiring Every Detail</h2>
+
+        <div class="sitting-boy-scene">
+          <!-- Starry Hill -->
+          <div class="sky-hill"></div>
+
+          <!-- Thought stream bubbles rising from boy -->
+          <div class="thought-stream">
+            <div class="thought-dot td-1"></div>
+            <div class="thought-dot td-2"></div>
+            <div class="thought-dot td-3"></div>
+          </div>
+
+          <!-- Sitting Boy Actor SVG -->
+          <div class="sitting-boy-actor">
+            <svg viewBox="0 0 240 220" width="180" height="165" xmlns="http://www.w3.org/2000/svg">
+              <!-- Shadow -->
+              <ellipse cx="120" cy="205" rx="75" ry="10" fill="rgba(0,0,0,0.6)" filter="blur(5px)" />
+              
+              <!-- Crossed legs sitting on hill -->
+              <path d="M 65 190 Q 120 215 175 190" stroke="#161026" stroke-width="26" stroke-linecap="round" fill="none"/>
+              <path d="M 85 180 Q 120 200 155 180" stroke="#251a3d" stroke-width="20" stroke-linecap="round" fill="none"/>
+
+              <!-- Torso leaning slightly back on hands -->
+              <path d="M 95 110 C 90 95, 145 95, 145 110 L 140 180 L 100 180 Z" fill="#2d1f47"/>
+
+              <!-- Arms supporting behind -->
+              <path d="M 98 120 L 75 195" stroke="#2d1f47" stroke-width="12" stroke-linecap="round"/>
+              <path d="M 142 120 L 165 195" stroke="#2d1f47" stroke-width="12" stroke-linecap="round"/>
+
+              <!-- Head tilted upward watching her with loving smile -->
+              <circle cx="120" cy="65" r="26" fill="#ffd8b8"/>
+              <!-- Hair -->
+              <path d="M 95 58 C 95 25, 145 25, 145 58 C 140 40, 105 40, 95 58 Z" fill="#181126"/>
+              
+              <!-- Facial details gazing upward -->
+              <circle cx="114" cy="60" r="3" fill="#221533"/>
+              <circle cx="128" cy="60" r="3" fill="#221533"/>
+              <path d="M 116 73 Q 121 78 126 73" stroke="#c94a6b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <circle cx="108" cy="67" r="4.5" fill="rgba(255,100,140,0.4)"/>
+              <circle cx="134" cy="67" r="4.5" fill="rgba(255,100,140,0.4)"/>
+            </svg>
+          </div>
+        </div>
+
+        <p class="body-text" style="margin-top: 15px;">
+          <em>"Whenever I sit and look at you, my mind fills with these unforgettable memories... You are my whole universe, Tharushi."</em>
+        </p>
+
+        <!-- Polaroid Memory Reel featuring her 5 Photos -->
+        <div class="memories-reel" id="memories-reel">
+          
+          <!-- Photo 1 -->
+          <div class="polaroid-card" style="--rot: -2deg;">
+            <div class="polaroid-tape"></div>
+            <div class="polaroid-img-box">
+              <img src="photo1.jpg" alt="Tharushi Vishmika" loading="lazy">
+            </div>
+            <div class="polaroid-caption">That smile that stole my heart ✨</div>
+          </div>
+
+          <!-- Photo 2 -->
+          <div class="polaroid-card" style="--rot: 2.5deg;">
+            <div class="polaroid-tape"></div>
+            <div class="polaroid-img-box">
+              <img src="photo2.jpg" alt="Tharushi Vishmika" loading="lazy">
+            </div>
+            <div class="polaroid-caption">My favorite view in the universe 🌸</div>
+          </div>
+
+          <!-- Photo 3 -->
+          <div class="polaroid-card" style="--rot: -3deg;">
+            <div class="polaroid-tape"></div>
+            <div class="polaroid-img-box">
+              <img src="photo3.jpg" alt="Tharushi Vishmika" loading="lazy">
+            </div>
+            <div class="polaroid-caption">Pure elegance & grace 💖</div>
+          </div>
+
+          <!-- Photo 4 -->
+          <div class="polaroid-card" style="--rot: 1.5deg;">
+            <div class="polaroid-tape"></div>
+            <div class="polaroid-img-box">
+              <img src="photo4.jpg" alt="Tharushi Vishmika" loading="lazy">
+            </div>
+            <div class="polaroid-caption">Every glance feels like magic 💫</div>
+          </div>
+
+          <!-- Photo 5 -->
+          <div class="polaroid-card" style="--rot: -1deg;">
+            <div class="polaroid-tape"></div>
+            <div class="polaroid-img-box">
+              <img src="photo5.jpg" alt="Tharushi Vishmika" loading="lazy">
+            </div>
+            <div class="polaroid-caption">The Queen of my heart 👑</div>
+          </div>
+
+        </div>
+
+        <div style="margin-top: 30px;">
+          <button class="romantic-btn pulse-glow" id="gallery-next-btn">
+            <span>One Final Question For You...</span>
+            <span>💍</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENE 5: The Final Question & WhatsApp Reply -->
+    <section class="scene" id="scene-reply">
+      <div class="glass-card">
+        <p class="romantic-sub">From This Moment Onward</p>
+        <h2 class="title-glow" style="font-size: 2.3rem;">Tharushi Vishmika...</h2>
+        
+        <p class="body-text" style="font-size: 1.15rem; line-height: 1.9;">
+          You make this world so much sweeter just by being in it. On your birthday and every day after, I promise to cherish, protect, and love you with everything I have.
+          <br><br>
+          <strong style="color: #ffd166; font-size: 1.25rem;">Will you stay by my side and let me love you forever? 💖</strong>
+        </p>
+
+        <!-- Quick Reply Options -->
+        <div class="reply-options">
+          <div class="reply-pill selected">YES! With all my heart! 💍💖</div>
+          <div class="reply-pill">Forever & always, my love! 🥰✨</div>
+          <div class="reply-pill">You made this my best birthday ever! 🎂❤️</div>
+          <div class="reply-pill">A million times YES! 🌸💫</div>
+        </div>
+
+        <!-- Custom Reply Box -->
+        <div>
+          <textarea class="reply-textarea" id="reply-text" rows="3" placeholder="Leave a sweet message or secret wish for him here... 💌"></textarea>
+        </div>
+
+        <!-- Direct WhatsApp Reply Action -->
+        <div>
+          <button class="romantic-btn whatsapp-btn pulse-glow" id="send-whatsapp">
+            <span>Send Your Reply on WhatsApp</span>
+            <span style="font-size: 1.3rem;">💬✨</span>
+          </button>
+        </div>
+
+        <p style="font-size: 0.85rem; color: #a192be; margin-top: 18px;">
+          Tapping will open WhatsApp with your chosen reply pre-filled to send directly to him! 📱
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Photo Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <div class="lightbox-content">
+      <div class="close-lightbox" id="close-lightbox">✕</div>
+      <img id="lightbox-img" src="" alt="Tharushi Vishmika">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
